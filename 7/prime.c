@@ -1,3 +1,6 @@
+/*
+ * Find the 1001st prime number
+ */
 #include <stdio.h>
 #include <stdbool.h>
 

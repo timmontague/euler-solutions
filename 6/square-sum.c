@@ -1,3 +1,7 @@
+/*
+ * Find the difference between the sum of squares of the first 100 natural
+ * numbers and the square of the sum
+ */
 #include <stdio.h>
 #include <math.h>
 int main(int argc, const char *argv[]) {

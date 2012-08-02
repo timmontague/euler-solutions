@@ -1,3 +1,7 @@
+/*
+ * Find greatest product of 4 adjacent numbers in any direction on the following
+ * grid
+ */
 #include <stdio.h>
 int main(int argc, const char *argv[]) {
 	int grid[20][20] = {
@@ -65,8 +69,6 @@ int main(int argc, const char *argv[]) {
 			}
 		}
 	}
-
-
 
 	printf("%d\n", max);
 	return 0;

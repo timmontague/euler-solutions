@@ -1,3 +1,6 @@
+/*
+ * Find the sum of all primes below 2 million
+ */
 #include <stdio.h>
 #include <stdbool.h>
 #include <stdint.h>

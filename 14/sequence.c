@@ -1,3 +1,11 @@
+/*
+ * The following iterative sequence is defined for the set of positive integers:
+ * n=n/2
+ * n=3n+1
+ *
+ * Every sequence, regardless of starting integer, ends at 1
+ * Which starting number, under 1000000, produces the longest chain?
+ */
 #include <stdio.h>
 #include <stdint.h>
 int main(int argc, const char *argv[]) {
@@ -24,6 +32,5 @@ int main(int argc, const char *argv[]) {
 		}
 	}
 	printf("%d\n", maxi);
-	
 	return 0;
 }

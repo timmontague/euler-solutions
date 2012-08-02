@@ -1,3 +1,6 @@
+/*
+ * What is the first fibonacci number to contain 1000 digits?
+ */
 import java.math.BigInteger;
 
 public class fib { 

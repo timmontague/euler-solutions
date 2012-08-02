@@ -1,3 +1,6 @@
+/*
+ * Find first 10 digits of the sum of the following numbers
+ */
 #include <stdio.h>
 #include <stdint.h>
 #include <gmp.h>
