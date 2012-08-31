@@ -13,7 +13,7 @@ int main(int argc, const char *argv[]) {
 	uint64_t n;
 	uint32_t count;
 	uint32_t max = 0;
-	uint32_t maxi;
+	uint32_t maxi = 0;
 	for (i = 1; i < 1000000; i++) {
 		n = (uint64_t)i;
 		count = 1;

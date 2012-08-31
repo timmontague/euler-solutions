@@ -9,7 +9,6 @@ int main(int argc, const char *argv[]) {
 	mpf_t d;
 	int i;
 	char s[10000];
-	char *p;
 
 	int offset, len;
 	int slen;

@@ -20,7 +20,7 @@ int main(int argc, const char *argv[]) {
 	int count;
 	int n;
 	int i;
-	int maxa, maxb;
+	int maxa = 0, maxb = 0;
 	int max = 0;
 	for (a = -999; a < 1000; a++) {
 		for (b = -999; b < 1000; b++) {
@@ -35,7 +35,7 @@ int main(int argc, const char *argv[]) {
 				max = count;
 				maxa = a;
 				maxb = b;
-				printf("a:%d b:%d count:%d n:%ld\n", a, b, count, n);
+				printf("a:%d b:%d count:%d n:%d\n", a, b, count, n);
 			}
 		}
 	}

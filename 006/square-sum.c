@@ -14,6 +14,6 @@ int main(int argc, const char *argv[]) {
 		squareofsum += i;
 	}
 	squareofsum = (unsigned long int)powl(squareofsum, 2);
-	printf("%d - %d = %d\n", squareofsum, sumofsquares, squareofsum-sumofsquares);
+	printf("%ld - %ld = %ld\n", squareofsum, sumofsquares, squareofsum-sumofsquares);
 	return 0;
 }

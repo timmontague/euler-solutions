@@ -17,11 +17,11 @@ int main(int argc, const char *argv[]) {
 	while(!isPrime(n)) {
 		if (isPrime(i) && n%i == 0) {
 			n /= i;
-			printf("%d\n", i);
+			printf("%ld\n", i);
 		} else {
 			i++;
 		}
 	}
-	printf("%d\n", n);
+	printf("%ld\n", n);
 	return 0;
 }
