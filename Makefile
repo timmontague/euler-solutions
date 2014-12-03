@@ -1,5 +1,5 @@
 CC=gcc
-CFLAGS=-O2 -Wall
+CFLAGS=-O3 -Wall -march=native
 LDFLAGS=-L/opt/local/lib -lgmp -lm
 
 # list of c files in every subdirectory
