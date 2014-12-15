@@ -1,6 +1,6 @@
 CC=gcc
 CFLAGS=-O3 -Wall -march=native
-LDFLAGS=-L/opt/local/lib -lgmp -lm
+LDFLAGS=-L/opt/local/lib -lgmp -lm -lpthread
 
 # list of c files in every subdirectory
 SRC=$(wildcard */*.c)
