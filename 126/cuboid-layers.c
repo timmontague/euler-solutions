@@ -1,6 +1,7 @@
 #include <stdio.h>
+#include <assert.h>
 
-int n_cubes(int layer, int w, int h, int d) {
+unsigned long n_cubes(unsigned long layer, unsigned long w, unsigned long h, unsigned long d) {
     int ret;
     // fill faces
     ret = 2*w*h + 2*w*d + 2*h*d;
@@ -11,38 +12,42 @@ int n_cubes(int layer, int w, int h, int d) {
     return ret;
 }
 
+#define START_N	(1000000)
+#define MAXN 	(1000000)
+
 int main(void) {
-    int h, w, d;
-    int n = 0;
-    int max;
-    int c = 4;
-    int maxn = 0;
-    while (n != 147) {
-	n = 0;
-	c += 2;
-	max = ((c-2)/4)+1;
-	for (h = 1; h < max; h++) {
-	    for (w = h; w < max; w++) {
-		for (d = w; d < max; d++) {
+    unsigned long h, w, d;
+    unsigned long min = 1;
+    unsigned long max = 20;
+    int ncubes[MAXN] = {0};
+    int done = 0;
+    while (done == 0) {
+	for (h = min; h <= max; h++) {
+	    for (w = h; w <= max; w++) {
+		for (d = w; d <= max; d++) {
 		    int layer = 1;
-		    int ncubes;
-		    do {
-			ncubes = n_cubes(layer, w, h, d);
+		    unsigned long n;
+		    while (1) {
+			n = n_cubes(layer, w, h, d);
 			layer++;
-		    } while (ncubes < c);
-		    if (ncubes == c) {
-			n++;
-		    } else if (layer == 1) {
-			break;
+			if (n < START_N+MAXN && n > START_N) {
+			    ncubes[n-START_N]++;
+			    if (ncubes[n-START_N] == 1000 || ncubes[n-START_N] == 1001) {
+				printf("c: %d n: %lu max:%lu\n", ncubes[n-START_N], n, max);
+			    }
+			} else {
+			    break;
+			}
 		    }
 		}
 	    }
 	}
-	if (n > maxn) {
-	    printf("c: %d n: %d\n", c, n);
-	    maxn = n;
+	max += 20;
+	min += 20;
+	if (max+START_N > 6*MAXN) {
+	    printf("min: %lu max: %lu\n", min, max);
+	    done = 1;
 	}
     }
-    printf("c: %d n: %d\n", c, n);
     return 0;
 }
