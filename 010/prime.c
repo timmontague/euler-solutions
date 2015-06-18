@@ -20,8 +20,10 @@ int main(int argc, const char *argv[]) {
 		// i is next prime
 		int n = i;
 		sum += n;
-		// mark all multiplicands of i
-		while(i < MAX) {
+		// mark i, and all multiplicands of i starting at i^2
+		numbers[i] = 1;
+		i = i*i;
+		while(i > 0 && i < MAX) {
 			numbers[i] = 1;
 			i += n;
 		}
